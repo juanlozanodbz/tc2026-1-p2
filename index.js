@@ -4,6 +4,8 @@ const path = require("path")
 const app = express()
 
 const vjRoutes = require('./routes/videojuegos')
+const csRoutes = require('./routes/consoles')
+const cvRoutes = require('./routes/consoleVideogames')
 const sequelize = require('./utils/database')
 
 //Configurar el servidor y que sepa que es un json
@@ -11,7 +13,8 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 app.use("/videojuegos",vjRoutes);
-app.use("/consoles",vjRoutes);
+app.use("/consoles",csRoutes);
+app.use("/consoleVideogames",cvRoutes);
 
 
 app.get("/test", (req, res) => {
