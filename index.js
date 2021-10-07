@@ -6,6 +6,10 @@ const app = express()
 const vjRoutes = require('./routes/videojuegos')
 const sequelize = require('./utils/database')
 
+//Configurar el servidor y que sepa que es un json
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+
 app.use("/videojuegos",vjRoutes);
 
 
