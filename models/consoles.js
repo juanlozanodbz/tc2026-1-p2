@@ -7,7 +7,14 @@ const Console = (sequelize)=>{
             allowNull: false,
             primaryKey: true
         },
-        name:Sequelize.STRING
+        brand:{
+            type:Sequelize.STRING(30),
+            allowNull:false
+        },
+        name:{
+            type:Sequelize.STRING(30),
+            allowNull:false
+        }
     }
 }
 
