@@ -11,6 +11,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 app.use("/videojuegos",vjRoutes);
+app.use("/consoles",vjRoutes);
 
 
 app.get("/test", (req, res) => {
